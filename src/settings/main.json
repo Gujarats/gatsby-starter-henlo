@@ -2,11 +2,14 @@
   "nav": [
     {
       "name": "Example Blog",
-      "permalink": "/blog/"
+      "permalink": "/blog/",
+      "icon": "ri-blogger-fill"
     },
     {
       "name": "Documentation",
-      "permalink": "https://github.com/clean-commit/gatsby-starter-henlo"
+      "permalink": "https://github.com/clean-commit/gatsby-starter-henlo",
+      "icon": "ri-blogger-fill"
     }
   ]
 }
+

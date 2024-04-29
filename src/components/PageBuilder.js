@@ -4,6 +4,7 @@ import ContentImage from '@/blocks/ContentImage'
 import Hero from '@/blocks/Hero'
 import Perks from '@/blocks/Perks'
 import RecentArticles from '@/blocks/RecentArticles'
+import TopMenu from '@/blocks/TopMenu'
 import { graphql } from 'gatsby'
 
 export default function PageBuilder({ blocks, preview = false }) {
@@ -12,6 +13,8 @@ export default function PageBuilder({ blocks, preview = false }) {
       {blocks &&
         blocks.map((block, i) => {
           switch (block.type) {
+            case 'topMenu':
+              return <TopMenu key={i} data={block} />
             case 'hero':
               return <Hero key={i} data={block} />
             case 'recentArticles':

@@ -7,6 +7,7 @@
     "defaults"
   ],
   "dependencies": {
+    "@remixicon/react": "^4.2.0",
     "clsx": "^1.2.1",
     "decap-cms-app": "^3.1.10",
     "gatsby": "^5.9.1",
@@ -37,6 +38,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.41.3",
     "react-markdown": "^8.0.4",
+    "styled-components": "^6.1.8",
     "tailwind-merge": "^2.2.2"
   },
   "keywords": [

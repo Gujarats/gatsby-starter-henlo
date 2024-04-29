@@ -6,8 +6,23 @@ title: Home Page
 permalink: /
 thumbnail: ''
 blocks:
+  - type: topMenu
+    title: Sandy Travel Cianjur,
+    columns:
+      - title: descitption
+        content: Sandy Travel Cianjur, Travel Door to Door, Antar Jemput
+      - title: facebook
+        content: https://www.facebook.com/sandyzdx?sfnsn=wiwspwa&mibextid=RUbZ1f
+      - title: instagram
+        content: https://www.instagram.com/zedax02
+      - title: whatsapp
+        content: https://wa.me/+6281214540566
+      - title: whatsapp2
+        content: https://wa.me/+62895392904728
+      - title: location
+        content: https://www.google.com/maps?q=-6.7909131,107.0618571&z=17&hl=en
   - type: hero
-    title: Henlo.
+    title: Yeah This is Title
     content: |-
       ## The most advanced starter for Gatsby & Netlify CMS.
 

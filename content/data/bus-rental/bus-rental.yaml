@@ -1,0 +1,8 @@
+- carType: "Toyota"
+  carName: "Toyoya Hiace"
+  price: "1.300.000"
+  image: "hiace.jpeg"
+- carType: "Izusu"
+  carName: "Izusu Elf Long 19 seats"
+  price: "1.300.000"
+  image: "elf.jpeg"

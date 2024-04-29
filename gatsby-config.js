@@ -6,6 +6,21 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     siteUrl: process.env.GATSBY_APP_URL || 'http://localhost:8000',
+    title: `Sandy Travel Cianjur`,
+    author: {
+      name: `Gujarat Santana`,
+      summary: `Trusted and Well Manner`,
+      webServices: `https://jrvel.com`,
+    },
+    description: `Sandy Travel Cianjur, Travel Door to Door, Antar Jemput`,
+    siteUrl: `https://www.alternatiftravelcianjur.com`,
+    social: {
+      facebook: `https://www.facebook.com/sandyzdx?sfnsn=wiwspwa&mibextid=RUbZ1f`,
+      instagram: `https://www.instagram.com/zedax02`,
+      whatsapp: `https://wa.me/+6281214540566`,
+      whatsapp2: `https://wa.me/+62895392904728`,
+      location: `https://www.google.com/maps?q=-6.7909131,107.0618571&z=17&hl=en`,
+    },
   },
   flags: {
     DEV_SSR: true,

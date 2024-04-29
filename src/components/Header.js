@@ -1,3 +1,4 @@
+import { RiHeartFill } from '@remixicon/react'
 import React from 'react'
 import DarkmodeToggle from './DarkmodeToggle'
 import Container from './UI/Container'
@@ -7,15 +8,19 @@ import nav from '@/settings/main.json'
 export default function Header() {
   return (
     <header className="flex h-16 border-b bg-white text-black dark:border-zinc-800 dark:bg-black dark:text-white">
-      <Container className="m-auto flex items-center justify-between gap-20">
-        <Link to="/" className="text-2xl font-bold ">
-          Henlo.
+      <Container className="m-auto flex items-center justify-between">
+        <Link to="/" className="text-xl font-bold">
+          Sandy Travel Cianjur
         </Link>
-        <div className="flex items-center">
-          <nav className="flex gap-4">
+        <div className="items-center ">
+          <nav className="hidden gap-4 text-black md:flex">
             {nav.nav.map((item, i) => (
               <Link to={item.permalink} key={i}>
-                {item.name}
+                <RiHeartFill
+                  size={36} // set custom `width` and `height`
+                  color="red" // set `fill` color
+                  className="my-icon" // add custom class name
+                />
               </Link>
             ))}
           </nav>
@@ -26,7 +31,7 @@ export default function Header() {
               href="https://github.com/clean-commit/gatsby-starter-henlo"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 block text-slate-400 transition-colors hover:text-slate-500 dark:hover:text-slate-300"
+              className="ml-4 hidden text-slate-400 transition-colors hover:text-slate-500 dark:hover:text-slate-300 md:block"
             >
               <div className="sr-only">Henlo on GitHub</div>
               <svg
