@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
+import Image from '@/resolvers/Image'
 
 const Wrapper = styled.div`
   position: relative;
@@ -40,7 +41,6 @@ function rotateTitles(titles, index, setIndex, isIncreased, setIsIncreased) {
 
 function TopMenu({ data }) {
   console.log('top-menu : data ', data)
-  const whatsapp = data?.columns[4]?.content
   const social = data?.social
 
   const [index, setIndex] = useState(() => {
@@ -61,16 +61,14 @@ function TopMenu({ data }) {
     () => rotateTitles(titles, index, setIndex, isIncreased, setIsIncreased),
     DELAY_IN_MILISECONDS,
   )
+  const imageTemp = '/img/top-menu.jpeg'
   return (
     <div className="h-[40rem] md:h-[550px]">
       <Wrapper>
-        <StaticImage
+        <Image
           className="z1 h-[25rem]"
-          src="../../static/img/top-menu.jpeg"
-          layout="fullWidth"
-          formats={['auto', 'png', 'webp', 'jpeg']}
-          quality={60}
-          alt=""
+          src={data?.photo?.image}
+          alt={data?.photo?.alt}
         />
         <Gradient className="bg-opacity-29 bg-black" />
         <div className="absolute left-0 top-1 z-10 h-[25rem] w-screen content-center">
@@ -123,7 +121,7 @@ function TopMenu({ data }) {
       <div className="bg-gray-99 relative w-screen sm:h-[9rem]">
         <div className="top-15 absolute right-0 m-2 mt-5 text-xl text-black">
           <div className="grid-cols0 grid text-sm">
-            <a className="mt1.5 flex flex-row p-1" href={whatsapp}>
+            <a className="mt1.5 flex flex-row p-1" href={''}>
               <i class="ri-smartphone-line"></i>{' '}
               <p className="ml-1">+62-812-1454-0566</p>
             </a>

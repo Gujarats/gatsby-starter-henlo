@@ -5,7 +5,7 @@ import {
   SelectField,
   ImageField,
   SettingsGroup,
-} from '../fields';
+} from '../fields'
 
 const Config = {
   label: 'Blocks',
@@ -13,15 +13,30 @@ const Config = {
   widget: 'list',
   types: [
     {
+      label: 'TopMenu',
+      name: 'topMenu',
+      widget: 'object',
+      fields: [
+        Title,
+        Content,
+        {
+          label: 'Columns',
+          name: 'topColumns',
+          widget: 'list',
+          summary: '{{fields.title}}',
+          fields: [Title, Content],
+        },
+        ImageField(),
+      ],
+    },
+    {
       label: 'Hero',
       name: 'hero',
       widget: 'object',
       fields: [
         Title,
         Content,
-        Buttons,
         SelectField('default', ['default', 'centered', 'full']),
-        SettingsGroup,
       ],
     },
     {
@@ -35,14 +50,7 @@ const Config = {
       name: 'content_image',
       widget: 'object',
       summary: '{{fields.title}}',
-      fields: [
-        ImageField(),
-        Title,
-        Content,
-        Buttons,
-        SelectField('default', ['default', 'reversed']),
-        SettingsGroup,
-      ],
+      fields: [ImageField(), Title, Content],
     },
     {
       label: 'Perks',
@@ -59,7 +67,6 @@ const Config = {
           summary: '{{fields.title}}',
           fields: [Title, Content],
         },
-        SettingsGroup,
       ],
     },
     {
@@ -87,6 +94,6 @@ const Config = {
       ],
     },
   ],
-};
+}
 
-export default Config;
+export default Config
